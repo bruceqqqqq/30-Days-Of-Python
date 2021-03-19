@@ -1,0 +1,16 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+    {% if error %}
+    <p style="color:red">{{error}}</p>
+    {% endif %}
+    <form method="POST" action="/api">
+        <div>
+            <label class="texto">Digite o nome do estudante:</label>
+            <input type="text" name="content" id="content" class="form-control">
+        </div>
+        <div>
+            <input type="submit" class="btn" value="Pesquisar">
+        </div>
+    </form>
+</div>
+{% endblock %}

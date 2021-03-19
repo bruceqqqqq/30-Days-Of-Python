@@ -1,0 +1,37 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+    <h1>Resultado Texto Analisado</h1>
+    <div class="result-header">
+    <p>
+        Total de palavras:
+        <em>{{words}}</em>
+    </p>
+    <p>
+        Numero de letras:
+        <em>{{letters}}</em>
+    </p>
+    <p>
+        A palavra mais frequente:
+        <em>{{palavra_mais_frequente}}</em>
+    </p>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Palavra</th>
+                <th>Contador de Palavra</th>
+            </tr>
+
+        </thead>
+        <tbody>
+        {% for word in wordsrow %}
+            <tr>
+                <td>{{word}}</td>
+                <td>{{phrase.count(word)}}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+{% endblock %}

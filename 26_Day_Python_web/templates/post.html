@@ -1,0 +1,16 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+    <h1>Analisador de texto</h1>
+    {% if error %}
+    <p style="color:red">{{error}}</p>
+    {% endif %}
+    <form method="POST" action="/post">
+        <div>
+            <textarea class="text-analyzer-text-area" rows="25" name="content" placeholder="Escreva o texto ou copie e cole o texto a ser analisado..." autofocus></textarea>
+        </div>
+        <div>
+            <input type="submit" class="btn" value="Processar texto" />
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'layout.html' %} {% block content %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Nunito:300,400|Raleway:300,400,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    <style>
+        svg {
+
+            background-color: white;
+
+        }
+
+        .bar:hover {
+            box-shadow: 0px 0px 5px green;
+        }
+        .text {
+        fill: #444;
+        font-size:24px;
+
+        font-family: sans-serif
+        }
+
+    </style>
+</head>
+<div class="container">
+    <p>Feedback report dos estudantes</p>
+    <p>
+        Number of feedbacks:
+        <span>{{total}}</span>
+    </p>
+    <div class="sentiment">
+        <div class="sent-type positive">Positive</div>
+        <div class="sent-type negative">Negative</div>
+        <div class="sent-type neutral">Neutral</div>
+    </div>
+<svg width="500" height="500">
+
+
+    <rect class="bar" fill="#b1d056" height="650" width="55" x="25" y="-250"></rect><rect class="bar" fill="#f65c78" height="25" width="55" x="95" y="375"></rect><rect class="bar" fill="#ffd271" height="725" width="55" x="165" y="-325"></rect><text class="text" x="50" y="-230">26</text><text class="text" x="120" y="395">1</text><text class="text" x="190" y="-305">29</text></svg>
+</div>
+{% endblock %}

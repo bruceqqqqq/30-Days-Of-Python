@@ -1,0 +1,16 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+    <h1>Bem vindo a {{name}}</h1>
+    <p>
+    Este aplicativo varre textos e analisa o número de palavras, caracteres e
+    palavras mais frequentes no texto. Confira clicando no analisador de texto no
+    menu. Você precisa das seguintes tecnologias para construir este aplicativo da web:
+    </p>
+    <ul class="tech-lists">
+        {% for tech in techs %}
+        <li class="tech">{{tech}}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

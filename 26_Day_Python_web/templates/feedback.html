@@ -1,0 +1,16 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+    <h1>{{name}}</h1>
+    {% if error %}
+    <p style="color:red">{{error}}</p>
+    {% endif %}
+    <form method="POST" action="/feedback">
+        <div>
+            <textarea class="text-analyzer-text-area" rows="25" name="content" placeholder="Escreva um feedback para o professor e o desafio 30 dias.." autofocus></textarea>
+        </div>
+        <div>
+            <input type="submit" class="btn" value="Enviar" />
+        </div>
+    </form>
+</div>
+{% endblock %}

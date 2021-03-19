@@ -1,0 +1,23 @@
+{% extends 'layout.html' %} {% block content %}
+<script src='https://kit.fontawesome.com/a076d05399.js'
+        crossorigin='anonymous'></script>
+<div class="container">
+    <h1>30 Dias de Python Challenge Participantes</h1>
+    {% for student in estudantes %}
+        <h3>{{student['name']}}</h3>
+        <h5>{{student['country']}}</h5>
+        <h5>{{student['city']}}</h5>
+        <h5>{{student['DOB']}}</h5>
+        <h5>{{student['skills']}}</h5>
+        <h3>{{student['bio']}}</h3>
+        <small><i class='far fa-clock' aria-hidden="true"> Criado em {{student['created_at']}}</i></small>
+        <div class="controlls">
+            <a class="btn btn-primary" href="/students/update/{{student['_id']}}">Editar</a>
+            <form action="/students/delete/{{student['_id']}}" method="POST">
+                <input class="btn btn-danger" type="submit" value="Deletar">
+            </form>
+        </div>
+    {% endfor %}
+
+</div>
+{% endblock %}

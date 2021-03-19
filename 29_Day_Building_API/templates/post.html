@@ -1,0 +1,16 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+    <h1>Text Analyzer</h1>
+    {% if error %}
+    <p style="color:orange">{{error}}</p>
+    {% endif %}
+    <form action="https://thirtydaysofpython-webapp.herokuapp.com/post" method="POST">
+        <div>
+            <textarea rows="25" name="content" placeholder="Write text or copy and paste text to analyse..." autofocus></textarea>
+        </div>
+        <div>
+            <input type="submit" class="btn" value="Process Text" />
+        </div>
+    </form>
+</div>
+{% endblock %}

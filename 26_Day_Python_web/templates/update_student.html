@@ -1,0 +1,34 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container" xmlns="http://www.w3.org/1999/html">
+    <form method="POST" action="/students/update/{{id}}">
+        <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Name" value="{{name}}" autofocus>
+        </div>
+        <div class="form-group">
+            <label for="DOB">Data de nascimento:</label>
+            <input type="date" name="DOB" id="DOB" class="form-control" placeholder="Data de Nascimento" value="{{DOB}}" autofocus>
+        </div>
+        <div class="form-group">
+            <label for="country">Pais:</label>
+            <input type="country" name="country" id="country" class="form-control" placeholder="Pais" value="{{country}}">
+        </div>
+        <div class="form-group">
+            <label for="city">Cidade:</label>
+            <input type="'city" name="city" id="city" class="form-control" placeholder="Cidade" value="{{city}}">
+        </div>
+        <div class="form-group">
+            <label for="skills">Habilidades:</label>
+            <textarea name="skills" id="skills" class="form-control" placeholder="Suas habilidades separada por virgula">{{skills}}</textarea>
+            <small>HTML, CSS, JAVASCRIPT, PYTHON e etc...</small>
+        </div>
+        <div class="form-group">
+            <label for="bio">Your Bio:</label>
+            <textarea name="bio" id="bio" class="form-control">{{bio}}</textarea>
+        </div>
+        <div>
+            <input type="submit" class="btn" value="Atualizar">
+        </div>
+    </form>
+</div>
+{% endblock %}
